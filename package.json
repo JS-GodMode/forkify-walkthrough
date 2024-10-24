@@ -7,7 +7,7 @@
     "main": false
   },
   "scripts": {
-    "start": "parcel index.html --no-content-hash",
+    "start": "parcel index.html",
     "build": "parcel build index.html --no-content-hash --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
