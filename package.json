@@ -1,0 +1,32 @@
+{
+  "name": "forkify-walkthrough",
+  "version": "1.0.0",
+  "description": "Walkthrough for the project 'Forkify'",
+  "main": "index.html",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "start": "parcel index.html --no-content-hash",
+    "build": "parcel build index.html --no-content-hash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JS-GodMode/forkify-walkthrough.git"
+  },
+  "author": "Swarnavo Khanra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JS-GodMode/forkify-walkthrough/issues"
+  },
+  "homepage": "https://github.com/JS-GodMode/forkify-walkthrough#readme",
+  "dependencies": {
+    "core-js": "^3.38.1",
+    "parcel": "^2.12.0",
+    "regenerator-runtime": "^0.14.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0"
+  }
+}
