@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "parcel index.html --no-content-hash",
-    "build": "parcel build index.html --no-content-hash",
+    "build": "parcel build index.html --no-content-hash --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
