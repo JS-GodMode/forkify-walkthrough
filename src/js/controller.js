@@ -2,6 +2,7 @@ import * as model from './model';
 import icons from 'url:../img/icons.svg';
 
 import recipeView from './views/recipeView';
+import searchView from './views/searchView';
 
 const recipeContainer = document.querySelector('.recipe');
 
@@ -37,13 +38,16 @@ const controlRecipes = async function () {
 };
 
 const controlSearchResults = async function () {
-  await model.loadSearchResults('pizza');
+  const query = searchView.getQuery();
+  console.log(query);
+  await model.loadSearchResults(query);
   console.log(model.state.search.recipes);
 };
-controlSearchResults();
+// controlSearchResults();
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
+  searchView.addHandlerSearch(controlSearchResults);
 };
 
 init();
