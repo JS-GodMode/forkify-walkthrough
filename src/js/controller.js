@@ -1,10 +1,8 @@
 import * as model from './model';
-import icons from 'url:../img/icons.svg';
 
 import recipeView from './views/recipeView';
 import searchView from './views/searchView';
-
-const recipeContainer = document.querySelector('.recipe');
+import resultsView from './views/resultsView';
 
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -38,12 +36,18 @@ const controlRecipes = async function () {
 };
 
 const controlSearchResults = async function () {
+  // 1. get search query
   const query = searchView.getQuery();
-  console.log(query);
+  if (!query) return;
+
+  resultsView.renderSpinner();
+
+  // 2. Load search results
   await model.loadSearchResults(query);
-  console.log(model.state.search.recipes);
+
+  //3. render the results
+  resultsView.render(model.state.search.recipes);
 };
-// controlSearchResults();
 
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
@@ -51,5 +55,3 @@ const init = function () {
 };
 
 init();
-// window.addEventListener('hashchange', controlRecipes);
-// window.addEventListener('load', controlRecipes);
