@@ -1,3 +1,5 @@
+![ezgif com-optimize(21)](https://github.com/user-attachments/assets/d9f21d8c-a122-4787-9ba4-15f7e12e5f93)
+
 # Forkify 🍲
 
 Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript**, bundled with **Parcel** for a streamlined development experience. This project is designed to provide in-depth practice with JavaScript fundamentals, setting a solid foundation for understanding its applications in frameworks like React, Vue, and Angular. Forkify connects to an API by [Jonas Schmedtmann](https://x.com/jonasschmedtman), allowing users to search, view, and add recipes with real-time updates and feedback.
@@ -115,7 +117,7 @@ Thanks to **Jonas Schmedtmann** for providing the API and inspiration for this p
 ## Author
 
 **[Swarnavo Khanra]**\
-A passionate web developer focused on mastering JavaScript and its applications across various frameworks. Connect with me on [LinkedIn]((https://in.linkedin.com/in/swarnavo-khanra) or follow me on [GitHub](https://github.com/Anonav0).
+A passionate web developer focused on mastering JavaScript and its applications across various frameworks. Connect with me on [LinkedIn](https://in.linkedin.com/in/swarnavo-khanra) or follow me on [GitHub](https://github.com/Anonav0).
 
 ## Contributing
 
