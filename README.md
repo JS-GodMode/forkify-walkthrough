@@ -116,7 +116,7 @@ Thanks to **Jonas Schmedtmann** for providing the API and inspiration for this p
 
 ## Author
 
-**[Swarnavo Khanra]**\
+**Swarnavo Khanra**\
 A passionate web developer focused on mastering JavaScript and its applications across various frameworks. Connect with me on [LinkedIn](https://in.linkedin.com/in/swarnavo-khanra) or follow me on [GitHub](https://github.com/Anonav0).
 
 ## Contributing
