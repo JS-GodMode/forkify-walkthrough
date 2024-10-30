@@ -131,6 +131,6 @@ Contributions are always welcome! Please follow these steps to contribute:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.**
 
 **Usage Restrictions**: Forkify is available solely for viewing and learning purposes. No commercial use, resale, or teaching distribution is allowed.
