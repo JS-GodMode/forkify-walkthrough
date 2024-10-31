@@ -1,8 +1,8 @@
-![ezgif com-optimize(21)](https://github.com/user-attachments/assets/d9f21d8c-a122-4787-9ba4-15f7e12e5f93)
+![ezgif com-optimize(22)](https://github.com/user-attachments/assets/47060a67-0e0f-4147-82e5-f5af2577d63c)
 
 # Forkify 🍲
 
-Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript**, bundled with **Parcel** for a streamlined development experience. This project is designed to provide in-depth practice with JavaScript fundamentals, setting a solid foundation for understanding its applications in frameworks like React, Vue, and Angular. Forkify connects to an API by [Jonas Schmedtmann](https://x.com/jonasschmedtman), allowing users to search, view, and add recipes with real-time updates and feedback.
+Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript**, bundled with **Parcel** for a streamlined development experience. This project is designed to provide in-depth practice with JavaScript fundamentals, setting a solid foundation for understanding its applications in frameworks like React, Vue, and Angular. Forkify connects to an API by [Jonas Schmedtmann](https://x.com/jonasschmedtman), allowing users to search, view, and add recipes with real-time updates, feedback, and pagination.
 
 ## Table of Contents
 
@@ -19,13 +19,14 @@ Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript*
 
 ## Overview
 
-Forkify offers a dynamic recipe browsing experience with the following features:
+Forkify offers a dynamic recipe browsing experience with features like:
 
-- **Search Recipes**: Find recipes with ease from a vast API database.
-- **View and Scale Recipes**: Display recipe details, adjust servings, and update ingredient quantities.
-- **Custom Recipes**: Add new recipes to personalize the library.
-- **Error and Success Feedback**: Real-time messaging to improve user interactions.
-- **Responsive Design**: Optimized for all devices.
+- **Search Recipes**: Search for recipes from a vast API database.
+- **Pagination**: Browse recipes with a clean and organized display of results.
+- **Recipe Details and Scaling**: View ingredients and instructions, adjust servings, and update ingredient quantities.
+- **Add Custom Recipes**: Add new recipes to personalize your library.
+- **Real-time Feedback**: Success and error messages for improved user experience.
+- **Responsive Design**: Optimized for mobile and desktop devices.
 
 ## Project Motivation
 
@@ -33,25 +34,22 @@ Forkify is a hands-on project to dive deep into JavaScript, applying core progra
 
 ## Features
 
-### Version 2.4 Updates
+### Version 2.5 Updates
 
-1.  **Search Functionality**
+1.  **Pagination**:
 
-    - Users can search recipes by keyword, with results fetched from the API.
-    - A loading spinner provides feedback during load times, and clear error messages notify users when searches don't return results.
+    - Pagination limits results to **10 recipes per page** by default, providing a better user experience by making it easier to navigate and view recipes.
+    - Pagination settings are configurable in `config.js`, making adjustments easy for specific needs.
 
-2.  **Enhanced User Feedback**
+2.  **Enhanced Modularity with MVC**:
 
-    - Error and success messages provide real-time responses, improving user experience.
-
-3.  **File Structure Improvements**
-
-    - A `View.js` parent file organizes common view functionalities, enhancing code modularity and maintainability.
+    - Forkify maintains a modular architecture through the Model-View-Controller (MVC) pattern.
+    - The codebase is structured to support scalability, allowing for easy updates and additions.
 
 ### Previous Versions Highlights
 
-- **MVC Architecture**: Modular architecture based on the Model-View-Controller pattern.
-- **Publisher-Subscriber Pattern**: Supports loose coupling and clear data flow within the MVC framework.
+- **MVC Architecture Implementation**: Improved code structure with a clear separation of concerns, supporting flexible expansion.
+- **Publisher-Subscriber Pattern**: Enhances modularity and data flow within the MVC framework.
 - **Helper and Config Files**: Centralized utility functions and configuration settings for easy maintenance.
 
 ## Technologies Used
