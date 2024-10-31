@@ -3,6 +3,7 @@ import * as model from './model';
 import recipeView from './views/recipeView';
 import searchView from './views/searchView';
 import resultsView from './views/resultsView';
+import paginationView from './views/paginationView';
 
 const timeout = function (s) {
   return new Promise(function (_, reject) {
@@ -36,17 +37,24 @@ const controlRecipes = async function () {
 };
 
 const controlSearchResults = async function () {
-  // 1. get search query
-  const query = searchView.getQuery();
-  if (!query) return;
+  try {
+    // 1. get search query
+    const query = searchView.getQuery();
+    if (!query) return;
 
-  resultsView.renderSpinner();
+    resultsView.renderSpinner();
 
-  // 2. Load search results
-  await model.loadSearchResults(query);
+    // 2. Load search results
+    await model.loadSearchResults(query);
 
-  //3. render the results
-  resultsView.render(model.state.search.recipes);
+    //3. render the results
+    resultsView.render(model.getSearchResultsPage());
+
+    //4. Render initial pagination buttons
+    paginationView.render(model.state.search);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const init = function () {
