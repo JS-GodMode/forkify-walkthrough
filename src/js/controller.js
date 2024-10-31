@@ -5,17 +5,8 @@ import searchView from './views/searchView';
 import resultsView from './views/resultsView';
 import paginationView from './views/paginationView';
 
-const timeout = function (s) {
-  return new Promise(function (_, reject) {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout after ${s} second`));
-    }, s * 1000);
-  });
-};
-
-// https://forkify-api.herokuapp.com/v2
-
-///////////////////////////////////////
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 const controlRecipes = async function () {
   try {
@@ -57,9 +48,18 @@ const controlSearchResults = async function () {
   }
 };
 
+const controlPagination = function (gotoPage) {
+  //render new results;
+  resultsView.render(model.getSearchResultsPage(gotoPage));
+
+  //Render new pagination buttons
+  paginationView.render(model.state.search);
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
 };
 
 init();
