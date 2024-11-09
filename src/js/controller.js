@@ -9,6 +9,8 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import bookmarksView from './views/bookmarksView';
 
+import addRecipeView from './views/addRecipeView';
+
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -89,6 +91,12 @@ const controlLoadBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
+const controlAddRecipe = function (newRecipe) {
+  console.log(newRecipe);
+
+  model.uploadData(newRecipe);
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlLoadBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -96,6 +104,7 @@ const init = function () {
   recipeView.addHandlerAddBookmark(controlBookmarks);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 
 init();

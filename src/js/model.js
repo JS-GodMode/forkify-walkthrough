@@ -22,7 +22,6 @@ export const loadRecipe = async function (id) {
       id: recipe.id,
       image: recipe.image_url,
       sourceUrl: recipe.source_url,
-      ingredients: recipe.ingredients,
       publisher: recipe.publisher,
       title: recipe.title,
       servings: recipe.servings,
@@ -101,4 +100,33 @@ const init = function () {
 };
 
 init();
-console.log(state.bookmarks);
+
+export const uploadData = function (newRecipe) {
+  // console.log(newRecipe);
+
+  // const ingredients = Object.entries(newRecipe);
+  const ingredients = Object.entries(newRecipe)
+    .filter(entry => entry[0].startsWith('ingredient') && entry[1] !== '')
+    .map(ing => {
+      const ingArr = ing[1].split(',').map(el => el.trim());
+      // console.log(ingArr);
+
+      if (ingArr.length !== 3) {
+        //throw a error
+      }
+
+      const [quantity, unit, description] = ingArr;
+      return { quantity: quantity ? +quantity : null, unit, description };
+    });
+
+  const recipe = {
+    title: newRecipe.title,
+    source_url: newRecipe.sourceUrl,
+    image: newRecipe.image_url,
+    publisher: newRecipe.publisher,
+    cooking_time: +newRecipe.cookingTime,
+    servings: +newRecipe.servings,
+    ingredients,
+  };
+  console.log(recipe);
+};
