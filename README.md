@@ -2,7 +2,9 @@
 
 # Forkify 🍲
 
-Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript**, bundled with **Parcel** for a streamlined development experience. This project is designed to provide in-depth practice with JavaScript fundamentals, setting a solid foundation for understanding its applications in frameworks like React, Vue, and Angular. Forkify connects to an API by [Jonas Schmedtmann](https://x.com/jonasschmedtman), allowing users to search, view, and add recipes with real-time updates, feedback, and pagination.
+Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript**, bundled with **Parcel** for a streamlined development experience. This project is designed to provide in-depth practice with JavaScript fundamentals, setting a solid foundation for understanding its applications in frameworks like React, Vue, and Angular. Forkify connects to an API by [Jonas Schmedtmann](https://x.com/jonasschmedtman), allowing users to search, view, and add recipes with real-time updates, feedback, pagination and custom bookmarking.
+
+Check out the live site on: [Forkify🍴](https://js-godmode.github.io/forkify-walkthrough/)
 
 ## Table of Contents
 
@@ -19,38 +21,35 @@ Forkify is a recipe web application built with **pure HTML, CSS, and JavaScript*
 
 ## Overview
 
-Forkify offers a dynamic recipe browsing experience with features like:
+Forkify delivers a dynamic recipe browsing experience with features such as:
 
-- **Search Recipes**: Search for recipes from a vast API database.
-- **Pagination**: Browse recipes with a clean and organized display of results.
-- **Recipe Details and Scaling**: View ingredients and instructions, adjust servings, and update ingredient quantities.
-- **Add Custom Recipes**: Add new recipes to personalize your library.
-- **Real-time Feedback**: Success and error messages for improved user experience.
-- **Responsive Design**: Optimized for mobile and desktop devices.
+- **Recipe Search and View**: Search recipes from a vast API database and view detailed ingredients.
+- **Pagination**: Organize results with paginated browsing.
+- **Bookmarking**: Save favorite recipes for quick access across sessions.
+- **Add Custom Recipes**: Users can add and save their own recipes with local storage support.
+- **Update Servings**: Adjust recipe servings to update ingredient quantities.
+- **Persistent Storage**: Bookmarks and custom recipes are stored locally, making them accessible even after a page refresh.
 
 ## Project Motivation
 
 Forkify is a hands-on project to dive deep into JavaScript, applying core programming concepts and preparing for advanced frameworks. This project is a comprehensive practice ground for foundational JS principles, API integration, and the use of modern bundlers like Parcel.
+Features
 
-## Features
+---
 
-### Version 2.5 Updates
+## Recent Updates
 
-1.  **Pagination**:
+### Version 4.0
 
-    - Pagination limits results to **10 recipes per page** by default, providing a better user experience by making it easier to navigate and view recipes.
-    - Pagination settings are configurable in `config.js`, making adjustments easy for specific needs.
+- **Add Recipe Feature**: Users can create and store custom recipes directly within the app, complete with a unique icon for easy distinction.
+- **Bookmark Button Fix**: Corrected display issues with the bookmark button for smoother bookmarking.
+- **Local Storage for Recipes and Bookmarks**: Both user-added recipes and bookmarks now persist across sessions, thanks to local storage.
 
-2.  **Enhanced Modularity with MVC**:
+#### Previous Version Highlights
 
-    - Forkify maintains a modular architecture through the Model-View-Controller (MVC) pattern.
-    - The codebase is structured to support scalability, allowing for easy updates and additions.
-
-### Previous Versions Highlights
-
-- **MVC Architecture Implementation**: Improved code structure with a clear separation of concerns, supporting flexible expansion.
-- **Publisher-Subscriber Pattern**: Enhances modularity and data flow within the MVC framework.
-- **Helper and Config Files**: Centralized utility functions and configuration settings for easy maintenance.
+- **Version 3.0-3.2**: Implemented pagination, bookmarking with local storage, optimized DOM updating, and recipe selection fixes.
+- **Version 2.6**: Added adjustable servings feature, enabling dynamic ingredient updates based on serving size.
+- **MVC Architecture**: The project structure follows the MVC (Model-View-Controller) pattern, enhancing code maintainability and scalability.
 
 ## Technologies Used
 
