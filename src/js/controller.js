@@ -21,14 +21,15 @@ const controlRecipes = async function () {
 
     // Update results view to mark selected search results
     resultsView.update(model.getSearchResultsPage());
+    bookmarksView.update(model.state.bookmarks);
 
     //1. load data from api
     await model.loadRecipe(id);
 
     //2. render recipe
     recipeView.render(model.state.recipe);
+    // console.log(model.state.recipe.bookmarked);
 
-    bookmarksView.update(model.state.bookmarks);
     // TEST PURPOSE
     // controlServings();
   } catch (error) {
@@ -93,7 +94,6 @@ const controlLoadBookmarks = function () {
 };
 
 const controlAddRecipe = async function (newRecipe) {
-  console.log(newRecipe);
   try {
     //Load a spinner
     addRecipeView.renderSpinner();
