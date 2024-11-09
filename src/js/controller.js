@@ -91,10 +91,20 @@ const controlLoadBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
 };
 
-const controlAddRecipe = function (newRecipe) {
+const controlAddRecipe = async function (newRecipe) {
   console.log(newRecipe);
+  try {
+    //Load a spinner
 
-  model.uploadData(newRecipe);
+    await model.uploadData(newRecipe);
+    console.log(model.state.recipe);
+
+    //Render recipe
+    recipeView.render(model.state.recipe);
+  } catch (error) {
+    console.log(error);
+    addRecipeView.renderError(error.message);
+  }
 };
 
 const init = function () {
