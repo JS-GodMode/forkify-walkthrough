@@ -10,6 +10,7 @@ import 'regenerator-runtime/runtime';
 import bookmarksView from './views/bookmarksView';
 
 import addRecipeView from './views/addRecipeView';
+import { CLOSE_WINDOW_SEC } from './config';
 
 const controlRecipes = async function () {
   try {
@@ -95,12 +96,28 @@ const controlAddRecipe = async function (newRecipe) {
   console.log(newRecipe);
   try {
     //Load a spinner
+    addRecipeView.renderSpinner();
 
+    //upload the new recipe data
     await model.uploadData(newRecipe);
     console.log(model.state.recipe);
 
     //Render recipe
     recipeView.render(model.state.recipe);
+
+    //render success message
+    addRecipeView.renderMessage();
+
+    //render bookmark view
+    bookmarksView.render(model.state.bookmarks);
+
+    //Change ID in URL
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
+
+    //Close form window
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, 1000 * CLOSE_WINDOW_SEC);
   } catch (error) {
     console.log(error);
     addRecipeView.renderError(error.message);
